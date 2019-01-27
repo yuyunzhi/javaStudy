@@ -1,5 +1,6 @@
-package com.company.java;
+package com.company.java.model;
 
+//父类
 public class News {
     //加protected 是因为，子类和同包可以访问
     protected  String title;
@@ -10,7 +11,9 @@ public class News {
         this.title = title;
         this.content = content;
     }
+    public  News() {
 
+    }
     public String getTitle() {
         return title;
     }
