@@ -5,13 +5,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.*;
+import java.util.Arrays;
 
-public class Main {
+/*
+从文件res/input.txt读取内容，并写入文件res/output.txt
+ */
+public class Demo01 {
 
     public static void main(String[] args) throws IOException {
-        //标准输出
-//        System.out.println("hello,world");
-
  /*       //标准输入, 和Reader
         InputStream val =System.in;
         //转化为字节
@@ -49,5 +50,10 @@ public class Main {
         //当写完后，关闭。注意关闭顺序
         printer.close();
         output.close();
+
+
+
+
+
     }
 }
