@@ -6,15 +6,15 @@ import java.io.FileReader;
 
 //News父类，自己是子类
 public class FileNews extends News{
-    //继承父类 变量和方法
+    //继承父类 变量和方法 要和父类的构造函数一致
     public FileNews(String title, String content) {
         super(title, content);
     }
 
-    //构造函数
+    //要和父类的构造函数一致
     public FileNews(){
-        //没有参数可以省略
-        super();
+        //super没有参数可以省略
+        //super();
     }
     //定义新的函数，与父类不一样的地方
     public void read(String fileUrl) {
@@ -30,7 +30,10 @@ public class FileNews extends News{
         }
     }
 
-
+    @Override
+    public String display() {
+        return title+":"+content;
+    }
 }
 
 
