@@ -1,7 +1,7 @@
 package com.company.java.model;
 
 //父类
-public class News {
+public class News implements Displayable {
     //加protected 是因为，子类和同包可以访问
     protected  String title;
     protected  String content;
@@ -22,21 +22,9 @@ public class News {
         return content;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-    //控制如何显示
-    public String display(){
-
-        return title+"\n"+content;
+    @Override
+    public void display(){
+        System.out.println("News播放中");
     }
 
 }

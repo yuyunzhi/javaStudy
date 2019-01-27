@@ -31,8 +31,8 @@ public class FileNews extends News{
     }
 
     @Override
-    public String display() {
-        return title+":"+content;
+    public void display() {
+        System.out.print( title+":"+content);
     }
 }
 
