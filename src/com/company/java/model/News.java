@@ -1,14 +1,9 @@
 package com.company.java;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-
 public class News {
-    //加final的原因是防止set函数再修改变量
-    private final String title;
-    private final String content;
+    //加protected 是因为，子类和同包可以访问
+    protected  String title;
+    protected  String content;
 
     //构造的自由和责任让用户来做,由用户定义title content
     public News(String title, String content) {
@@ -23,6 +18,17 @@ public class News {
     public String getContent() {
         return content;
     }
+
+
+
+
+
+
+
+
+
+
+
 
     //控制如何显示
     public String display(){

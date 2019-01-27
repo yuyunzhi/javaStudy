@@ -1,6 +1,6 @@
 package com.company.java;
 
-import java.io.IOException;
+import com.company.java.model.News;
 
 /*
 封装一个类，用来传入title ,content初始化内容
