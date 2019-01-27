@@ -6,25 +6,25 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class News {
-    private String title;
-    private String content;
+    //加final的原因是防止set函数再修改变量
+    private final String title;
+    private final String content;
 
-    public void read(String fileUrl){
-        //从“纯文本”文件中读取内容
-        //赋值给title
-        //赋值给content
-
-        try {
-            //找到文件，转化为流，放入缓存中
-            BufferedReader reader = new BufferedReader(new FileReader(new File(fileUrl)));
-
-            title=reader.readLine();
-            content = reader.readLine();
-        } catch (java.io.IOException e) {
-            e.printStackTrace();
-            System.out.println("新闻出错");
-        }
+    //构造的自由和责任让用户来做,由用户定义title content
+    public News(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    //控制如何显示
     public String display(){
 
         return title+"\n"+content;
