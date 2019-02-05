@@ -10,7 +10,6 @@ public class FileNews extends News{
     public FileNews(String title, String content) {
         super(title, content);
     }
-
     //要和父类的构造函数一致
     public FileNews(){
         //super没有参数可以省略
