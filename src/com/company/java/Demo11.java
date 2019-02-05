@@ -13,6 +13,15 @@ public class Demo11 {
 
     //主线程
     public static void main(String args[]){
+
+        //获取当前线程信息
+        Thread t = Thread.currentThread();//静态方法
+        System.out.println("Current thread: " + t);
+        // change the name of the thread
+        t.setName("My Thread");
+        System.out.println("After name change: " + t);
+
+        //-----------------------------------------------------------
         //创建新的子线程,NewThread是通过继承Thread
         NewThread t1 = new NewThread(); //初始化，start()，子线程开始执行，主线程返回main方法,开始执行下面的内容
 
