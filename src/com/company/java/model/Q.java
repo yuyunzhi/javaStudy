@@ -25,15 +25,21 @@ public class Q{
     //生产者
     public synchronized void put(int n) {
         // 如果这个值已经设置好了
+        System.out.println("a");
         if (valueSet)
             try {
+                System.out.println("b");
                 wait(); // 等待get()把值取走
+                System.out.println("c");
             } catch (InterruptedException e) {
                 System.out.println("InterruptedException caught");
             }
+        System.out.println("d");
         this.n = n; //设置一个新的值
         valueSet = true; // 标记已经设置好了
         System.out.println("Put: " + n);
+        System.out.println("e");
         notify(); // 通知线程get() 这个最新的值
+        System.out.println("f");
     }
 }

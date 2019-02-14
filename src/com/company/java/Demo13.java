@@ -9,8 +9,9 @@ public class Demo13 {
 
     public static void main(String args[]){
         Q q = new Q();
-        q.get();
         q.put(1);
+        q.get();
+
 
     }
 }
